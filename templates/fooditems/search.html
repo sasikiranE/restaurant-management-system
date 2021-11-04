@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<main class="searchpage">
+    <h1 class="text-center">
+        Search Result
+    </h1>
+
+    <section class="searchbox container mt-5 p-3 bg-accent">
+        <form method="get" action="{% url 'search' %}">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <select name="diet" id="inputState" class="form-control">
+                        <option selected disabled hidden>Diet</option>
+                        <option value="veg">veg</option>
+                        <option value="non-veg">non-veg</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <select class="form-control" name="category">
+                        <option selected disabled hidden>Category</option>
+                        {% for category in category_search %}
+                        <option value="{{ category }}">{{ category }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-light">Search</button>
+            </div>
+
+        </form>
+        
+    </section>
+
+
+
+    <section class="search-results container mt-3 grid">
+
+        {% for item in items %}
+        <!-- item 1 -->
+        <div class="card border-0 text-center">
+            <div>
+                <img src="{{ item.photo.url }}" class="card-img-top" alt="team-member">
+
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text">${{ item.price }}</p>
+                <a href="{% url 'add_to_cart' item.id %}" class="btn btn-accent btn-block">Add to Cart</a>
+            </div>
+        </div>
+        {% endfor %}
+
+
+
+    </section>
+</main>
+
+{% endblock %}

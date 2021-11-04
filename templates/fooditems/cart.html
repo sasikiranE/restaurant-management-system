@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    {% include 'messages.html' %}
+</div>
+
+<br>
+<main>
+    <div class="container">
+        {% for cart_item in cart_items %}
+        <!-- item1 -->
+        <div class="card mb-3" style="width: 100%;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{{ cart_item.food.photo.url }}" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ cart_item.food.name }}</h5>
+                        <p class="card-text">$ {{ cart_item.food.price }}</p>
+                        <form method="post" action="{% url 'update_cart' cart_item.id %}">
+                            {% csrf_token %}
+                            <div class="form-group row">
+                              <label for="inputQunatity" class="col-sm-2 col-form-label">Quantity</label>
+                              <div class="col-sm-10">
+                                <input name="quantity" type="number" min="1" max="3" class="form-control" id="inputQunatity" value="{{ cart_item.quantity }}" placeholder="1">
+                              </div>
+                            </div>
+                            <button type="submit" class="btn btn-accent btn-sm mb-2">save</button>
+
+                          </form>
+                        <a href="{% url 'remove_from_cart' cart_item.id %}" class="btn btn-accent btn-block">remove</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <h1>Total : ${{ total }}</h1>
+        <a href="#" class="btn btn-accent btn-block">Proceed to buy</a>
+    </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br>
+<div class="container">
+    {% include 'messages.html' %}
+</div>
+
+<h1 class="text-center">Edit profile</h1>
+<hr style="border: 1px solid orange;">
+<div class="container" style="margin: 10px;">
+    <form method="post" action="{% url 'profile' %}">
+        {% csrf_token %}
+        
+        <div class="form-group col-lg-8 offset-2">
+            <label class="form-label">
+                <h3>firstname</h3>
+            </label>
+            <input name="firstname" type="text" value="{{ user.first_name }}" class="form-control" placeholder="firstname">
+        </div>
+        <div class="form-group col-lg-8 offset-2">
+            <label class="form-label">
+                <h3>lastname</h3>
+            </label>
+            <input name="lastname" type="text" value="{{ user.last_name }}" class="form-control" placeholder="lastname">
+        </div>
+        <div class="form-group col-lg-8 offset-2">
+            <label class="form-label">
+                <h3>city</h3>
+            </label>
+            <input name="city" type="text" value="{{ customer.city }}" class="form-control" placeholder="city">
+        </div>
+        <div class="form-group col-lg-8 offset-2">
+            <label class="form-label">
+                <h3>pincode</h3>
+            </label>
+            <input name="pincode" type="text" value="{{ customer.pincode }}" class="form-control" placeholder="pincode">
+        </div>
+        <div class="form-group col-lg-8 offset-2">
+            <label class="form-label">
+                <h3>mobile_number</h3>
+            </label>
+            <input name="mobile_number" type="text" value="{{ customer.mobile_number }}" class="form-control" placeholder="mobile_number">
+        </div>
+        <div class="form-group col-lg-8 offset-2">
+            <label class="form-label">
+                <h3>address</h3>
+            </label>
+            <input name="address" type="text" value="{{ customer.address }}" class="form-control" placeholder="address">
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-accent">save</button>
+        </div>
+
+    </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="about-us">
+
+    <h2 class="text-center mt-5 mb-2  animate__animated animate__flipInX animate__slow	">
+      Get in touch with Our Restaurant and Team
+    </h2>
+    <p class="text-center mb-3  animate__animated animate__flipInX animate__delay-1s">
+      Fill the form below and we will get in touch asap
+    </p>
+
+    <section class="container mt-5">
+      <div class="row ">
+        <div class="col-md-6 mb-2 ">
+          <form method="post" action="{% url 'contact' %}">
+            {% csrf_token %}
+            <div class="form-row">
+              <div class="form-group col-lg-6">
+                <input name="firstname" type="text" class="form-control" placeholder="firstname">
+              </div>
+              <div class="form-group col-lg-6">
+                <input name="lastname" type="text" class="form-control" placeholder="lastname">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-lg-6">
+                <input name="email" type="email" class="form-control" placeholder="email">
+              </div>
+              <div class="form-group col-lg-6">
+                <input name="phone_number" type="text" class="form-control" placeholder="phone number">
+              </div>
+            </div>
+            <div class="form-group">
+              <input name="subject" type="text" class="form-control" placeholder="subject">
+            </div>
+            <div class="form-group pt-2">
+              <textarea name="details_message" class="form-control" rows="3" placeholder="details message"></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-accent">Contact Us</button>
+            </div>
+
+          </form>
+        </div>
+
+        <div class="col-md-4 offset-md-2 d-flex justify-content-center mb-2">
+          <div class="card">
+            <div class="card-body">
+              <div class="mb-4">
+                <h6 class="card-title font-weight-bolder">Phone</h6>
+                <span class="card-text">+91 9898989899</span>
+              </div>
+              <div class="mb-4">
+                <h6 class="card-title font-weight-bolder">Email</h6>
+                <span class="card-text">info@tasty.com</span>
+              </div>
+              <div class="mb-4">
+                <h6 class="card-title font-weight-bolder">Address</h6>
+                <span class="card-text">12 abc street, <br> Varanasi UP, <br>India </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+{% endblock %}
