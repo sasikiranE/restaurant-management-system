@@ -18,34 +18,34 @@
         <form class="col-6 offset-md-3" method="post" action="{% url 'register' %}">
             {% csrf_token %}
             <div class="form-group">
-                <input name="firstname" type="text" class="form-control" placeholder="firstname">
+                <input name="firstname" type="text" class="form-control" placeholder="firstname" required>
             </div>
             <div class="form-group">
-                <input name="lastname" type="text" class="form-control" placeholder="lastname">
+                <input name="lastname" type="text" class="form-control" placeholder="lastname" required>
             </div>
             <div class="form-group">
-                <input name="username" type="text" class="form-control" placeholder="username">
+                <input name="username" type="text" class="form-control" placeholder="username" required>
             </div>
             <div class="form-group">
-                <input name="email" type="email" class="form-control" placeholder="email address">
+                <input name="email" type="email" class="form-control" placeholder="email address" required>
             </div>
             <div class="form-group">
-                <input name="mobile_number" type="text" class="form-control" placeholder="mobile number">
+                <input name="mobile_number" type="text" class="form-control" placeholder="mobile number" required>
             </div>
             <div class="form-group">
-                <input name="pincode" type="text" class="form-control" placeholder="pincode">
+                <input name="pincode" type="text" class="form-control" placeholder="pincode" required>
             </div>
             <div class="form-group">
-                <input name="city" type="text" class="form-control" placeholder="city">
+                <input name="city" type="text" class="form-control" placeholder="city" required>
             </div>
             <div class="form-group">
-                <input name="address" type="text" class="form-control" placeholder="address">
+                <input name="address" type="text" class="form-control" placeholder="address" required>
             </div>
             <div class="form-group">
-                <input name="password" type="password" class="form-control" placeholder="Password">
+                <input name="password" type="password" class="form-control" placeholder="Password" required>
             </div>
             <div class="form-group">
-                <input name="confirm_password" type="password" class="form-control" placeholder="Confirm Password">
+                <input name="confirm_password" type="password" class="form-control" placeholder="Confirm Password" required>
             </div>
 
             <button type="submit" class="btn btn-accent form-btn w-100 mt-3 mb-3">Signup</button>
