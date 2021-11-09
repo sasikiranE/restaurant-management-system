@@ -1,4 +1,3 @@
-from django.db.models.query import RawQuerySet
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth.models import User
 from django.contrib import auth, messages
