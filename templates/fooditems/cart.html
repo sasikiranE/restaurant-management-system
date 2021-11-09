@@ -27,7 +27,7 @@
                             <div class="form-group row">
                               <label for="inputQunatity" class="col-sm-2 col-form-label">Quantity</label>
                               <div class="col-sm-10">
-                                <input name="quantity" type="number" min="1" max="3" class="form-control" id="inputQunatity" value="{{ cart_item.quantity }}" placeholder="1">
+                                <input name="quantity" type="number" min="1" max="{{ cart_item.food.limit }}" class="form-control" id="inputQunatity" value="{{ cart_item.quantity }}" placeholder="1">
                               </div>
                             </div>
                             <button type="submit" class="btn btn-accent btn-sm mb-2">save</button>
