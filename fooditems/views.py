@@ -70,9 +70,12 @@ def cart(request):
 @login_required(login_url='login')
 def add_to_cart(request, item_id):
     item = get_object_or_404(Item, pk=item_id)
-    obj = Cart(user=request.user, food=item)
-    obj.save()
-    messages.success(request, 'Added to cart successfullly')
+    if(Cart.objects.filter(user=request.user, food=item).exists()):
+        messages.info(request, "item already exists in the cart")
+    else:
+        obj = Cart(user=request.user, food=item)
+        obj.save()
+        messages.success(request, 'Added to cart successfullly')
     return redirect('items')
 
 
