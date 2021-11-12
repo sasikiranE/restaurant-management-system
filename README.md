@@ -16,9 +16,6 @@ pip install pipenv
 
 _clone the repo to any directory_
 
-```cmd
-git clone https://github.com/Sasi-Kiran-E/restaurant-management-system.git
-```
 
 _navigate to the project directory, create and activate virtual environment using single command_
 
