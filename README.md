@@ -1,36 +1,78 @@
 # itw-2-django_project
 # restaurant-management-system
-techonologies used -> backend -> Django framework, MySQL database
 # Restaurant management system website (Django)
 
-## requirements 
-`Python (version 3) and Pip`
+### Technologies used
+- MySQL
+- Django Framework
+- HTML & CSS
+- Bootstrap
 
-## Installation (Windows)
+### requirements 
+`Python (version >= 3.8) and Pip`
 
-_install pipenv for creating virtual environment_
+### Installation (Windows)
+
+- install `pipenv` to create virtual environment.
 
 ```cmd
 pip install pipenv
 ```
+- clone the repo to any directory
 
-_clone the repo to any directory_
+```cmd
+git clone https://github.com/sasikiranE/restaurant-management-system.git
+```
 
+- remove the Pipfile in the project directory. (if your python version is not 3.8)
 
-_navigate to the project directory, create and activate virtual environment using single command_
+- navigate to the project directory(`restaurant-management-system/`), create and activate virtual environment using single command
 
 ```cmd
 pipenv shell
 ```
 
-_install the requirements_
+- install the requirements
 
 ```cmd
 pipenv install -r requirements.txt
 ```
 
-_run the server_
+- run the server
 
 ```cmd
 python manage.py runserver
+```
+
+### Installation (Linux - Ubuntu)
+
+- install `pipenv` to create virtual environment.
+
+```cmd
+sudo apt install pipenv
+```
+- clone the repo to any directory
+
+```cmd
+git clone https://github.com/sasikiranE/restaurant-management-system.git
+```
+
+- remove the Pipfile in the project directory. (if your python version is not 3.8)
+
+- navigate to the project directory(`restaurant-management-system/`), create and activate virtual environment using single command
+
+```cmd
+pipenv shell
+```
+
+- install the requirements
+
+```cmd
+pipenv install -r requirements.txt
+```
+
+- run the server
+
+```cmd
+python3 manage.py runserver
 ```
