@@ -28,7 +28,6 @@ pip install pipenv
 git clone https://github.com/sasikiranE/restaurant-management-system.git
 ```
 
-- remove the Pipfile in the project directory. (if your python version is not 3.8)
 
 - navigate to the project directory(`restaurant-management-system/`), create and activate virtual environment using single command
 
@@ -36,7 +35,7 @@ git clone https://github.com/sasikiranE/restaurant-management-system.git
 pipenv shell
 ```
 
-- install the requirements
+- install the requirements (dependencies)
 
 ```cmd
 pipenv install -r requirements.txt
@@ -61,7 +60,6 @@ sudo apt install pipenv
 git clone https://github.com/sasikiranE/restaurant-management-system.git
 ```
 
-- remove the Pipfile in the project directory. (if your python version is not 3.8)
 
 - navigate to the project directory(`restaurant-management-system/`), create and activate virtual environment using single command
 
@@ -69,7 +67,7 @@ git clone https://github.com/sasikiranE/restaurant-management-system.git
 pipenv shell
 ```
 
-- install the requirements
+- install the requirements (dependencies)
 
 ```cmd
 pipenv install -r requirements.txt
