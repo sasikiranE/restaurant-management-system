@@ -11,7 +11,11 @@
 ### requirements 
 `Python (version >= 3.8) and Pip`
 
-### Installation (Windows)
+### Installation
+- [Linux (Ubuntu)](#linux-installation)
+- [Windows](#windows-installation)
+
+# windows installation
 
 - install `pipenv` to create virtual environment.
 
@@ -44,7 +48,7 @@ pipenv install -r requirements.txt
 python manage.py runserver
 ```
 
-### Installation (Linux - Ubuntu)
+# linux installation
 
 - install `pipenv` to create virtual environment.
 
