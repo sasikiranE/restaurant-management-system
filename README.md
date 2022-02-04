@@ -1,5 +1,5 @@
 # itw-2-django_project
-# restaurant-management-system
+- website is live at https://sasi-itw2.herokuapp.com/
 # Restaurant management system website (Django)
 
 ### Technologies used
